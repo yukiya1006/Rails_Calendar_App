@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<div class="toppage">
+<h1 class="top"><i class="fa-solid fa-dumbbell"></i> Musscle Calendar</h1>
+</div>
+<br>
+<div class="container">
+<div class="row">
+<div class="col-12">
+	<h4 class="schedule"><i class="fa-solid fa-child"></i> トレーニング一覧</h4>
+	<div class="schedule2"></div>
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th>種目</th>
+      <th>重量</th>
+      <th>回数</th>
+      <th>セット数</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @blogs.each do |blog| %>
+      <tr>
+        <td><%= link_to blog.menu , blog %></td>
+        <td><%= blog.weight %></td>
+        <td><%= blog.rep %></td>
+        <td><%= blog.set %></td>
+        <td><%= blog.start_time %></td>
+        <td><%= link_to '消去',blog_path, method: :delete, data: { confirm: '削除しますか？' }%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+</div>

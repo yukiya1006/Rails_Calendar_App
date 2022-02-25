@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<div class="toppage">
+<h1 class="top"><i class="fa-solid fa-dumbbell"></i> Musscle Calendar</h1>
+<br>
+
+<div class="row">
+<div class="col-md-4">
+	<div class="schedule">過去のトレーニング一覧</div>
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th>トレーニング内容</th>
+      <th>重量</th>
+      <th>回数</th>
+      <th>セット数</th>
+      <th>日程</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @blogs.each do |blog| %>
+      <tr>
+        <td><%= link_to blog.menu , blog %></td>
+        <td><%= blog.weight %></td>
+        <td><%= blog.rep %></td>
+        <td><%= blog.set %></td>
+        <td><%= blog.start_time %></td>
+        <td><%= link_to '編集', edit_blog_path(blog)%></td>
+        <td><%= link_to '消去',blog_path(blog.id), method: :delete, data: { confirm: '本当に?' }%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,71 @@
+<div class="toppage">
+<h1 class="top"><i class="fa-solid fa-dumbbell"></i> Musscle Calendar</h1>
+<div class="container"></div>
+<div class="row">
+<div class="col">
+
+
+
+<%= form_with(model: @blog, local: true) do |form| %>
+
+
+
+
+
+
+
+
+
+
+  <div class="menu-list">
+    <div>メニュー</div>
+    <%= form.select :menu,
+    [["ベンチプレス"],
+    ["ラットプル"],
+    ["スクワット"],
+    ["バーベルカール"],
+    ["ショルダープレス"],
+    ], include_blank: "選択して下さい" %>
+
+
+
+    <div class="form-tag">重量</div>
+    <%= form.select :weight, [*(1...200)], include_blank: "選択して下さい"  %>
+
+    <div class="form-tag">回数</div>
+    <%= form.select :rep, [*(1...30)], include_blank:   "選択して下さい"  %>
+
+    <div class="form-tag">セット</div>
+    <%= form.select :set, [*(1...10)], include_blank: "選択して下さい"  %>
+
+    </div>
+
+    <div class=time>
+      <div class=time2>時間</div>
+      <%= form.datetime_local_field :start_time %>
+      <%#= form.datetime_select :start_time %>
+
+
+
+    <div class="d-grid col-1">
+    <%= form.submit "登録", class: "btn btn-info" %>
+     </div>
+     </div>
+<% end %>
+
+    </div>
+    <br>
+<br>
+<div class="col-12">
+<%= month_calendar events: @blogs do |date, blogs| %>
+  <%= date.day %>
+
+  <% blogs.each do |blog| %>
+    <div>
+      <%= link_to blog.menu, blog %>
+    </div>
+  <% end %>
+<% end %>
+</div>
+</div>
+</div>

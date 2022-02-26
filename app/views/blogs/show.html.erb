@@ -3,11 +3,12 @@
 <div class="toppage">
 <h1 class="top"><i class="fa-solid fa-dumbbell"></i> Musscle Calendar</h1>
 </div>
+
 <br>
 <div class="container">
 <div class="row">
 <div class="col-12">
-	<h4 class="schedule"><i class="fa-solid fa-child"></i> トレーニング一覧</h4>
+	<h4 class="schedule"><i class="fa-solid fa-child"></i> トレーニング一覧 <%= link_to "back", blogs_path %></h4>
 	<div class="schedule2"></div>
 <table class="table">
   <thead class="thead-light">
@@ -23,12 +24,12 @@
   <tbody>
     <% @blogs.each do |blog| %>
       <tr>
-        <td><%= link_to blog.menu , blog %></td>
+        <td><%= blog.menu %></td>
         <td><%= blog.weight %></td>
         <td><%= blog.rep %></td>
         <td><%= blog.set %></td>
         <td><%= blog.start_time %></td>
-        <td><%= link_to '消去',blog_path, method: :delete, data: { confirm: '削除しますか？' }%></td>
+        <td><%= link_to '消去',blog_path(blog.id), class: "btn btn-danger btn-sm", method: :delete, data: { confirm: '削除しますか？' }%></td>
       </tr>
     <% end %>
   </tbody>

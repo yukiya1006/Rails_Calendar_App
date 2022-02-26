@@ -38,6 +38,7 @@
 
 body {
  background: linear-gradient(to bottom, #FFF, #FFC778 30%, #F89174 60%, #748af8);
+ background: linear-gradient(to bottom, #FFC778, transparent);
 }
 
 .top {
@@ -73,4 +74,19 @@ body {
    font-family: system-ui;
    // background:linear-gradient(transparent 75%, #FF00FF 0%);
    // background:linear-gradient(#C0C0C0);
+}
+
+// @media (max-width: 720px) and (min-width: 421px) {
+//  .menu-list {
+//  display: flex;
+// 	flex-wrap: wrap;
+// 	gap: 10px 27px;
+// }
+// }
+
+@media (max-width: 720px) and (min-width: 0px){
+ .menu-list {
+  display: block;
+ }
+ 
 }

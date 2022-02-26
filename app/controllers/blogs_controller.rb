@@ -2,6 +2,7 @@ class BlogsController < ApplicationController
   def index
     @blogs = Blog.all
     @blog = Blog.new
+    # @blog = Blog.find(params[:id])
   end
 
   def new
@@ -9,9 +10,9 @@ class BlogsController < ApplicationController
   end
 
   def show
-    @blog = Blog.find(params[:id])
-    # @blog = Blog.all.order(blog_id)
+    # @blog = Blog.find(params[:id])
     @blogs = Blog.all
+    # @blog = Blog.new
   end
 
   def create
@@ -20,8 +21,8 @@ class BlogsController < ApplicationController
   end
 
   def destroy
-    @blog = Blog.find(params[:id])
-    @blog.destroy
+    blog = Blog.find(params[:id])
+    blog.destroy
     redirect_to blog_path, notice:"削除しました"
   end
 

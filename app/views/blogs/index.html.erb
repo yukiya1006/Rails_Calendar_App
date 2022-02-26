@@ -49,17 +49,15 @@
 
     <div class="d-grid col-1">
     <%= form.submit "登録", class: "btn btn-info" %>
+    <%#= link_to "メニュー一覧", blogs_path %>
      </div>
      </div>
 <% end %>
 
     </div>
-    <br>
-<br>
 <div class="col-12">
 <%= month_calendar events: @blogs do |date, blogs| %>
   <%= date.day %>
-
   <% blogs.each do |blog| %>
     <div>
       <%= link_to blog.menu, blog %>

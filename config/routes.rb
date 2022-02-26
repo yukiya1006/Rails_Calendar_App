@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
+  get 'users/show'
+  get 'users/create'
   devise_for :users
   resources :blogs
   resources :homes
-  resources :trainigs
-  # root to: 'start#index'
-  root to: 'blogs#index'
+  resources :users
+  root to: 'homes#top'
 end

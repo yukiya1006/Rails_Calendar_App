@@ -1,2 +1,26 @@
-<h1>Homes#top</h1>
-<p>Find me in app/views/homes/top.html.erb</p>
+<div class="top-box">
+<div class="top-box2">
+<h1 class="top-name"><i class="fa-solid fa-person-running"></i> Let's Training</strong>  !!</h1>
+<p class="name-1">The mind is the limit. As long as the mind can envision the fact that you can do something,</p>
+
+<p class="name-2">you can do it, as long as you really believe 100 percent.</p>
+<p><i class="fa-solid fa-face-smile"></i> Let's go!</p>
+
+  
+    <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+    <div class="top-button">
+    <div class="top-login">
+      <%= f.submit "Log In" %>
+    </div>or
+    <div class="top-signin">
+      <%= f.submit "Sign In" %>
+    </div>
+    </div>
+       <% end %>
+  
+    
+</div>
+</div>
+
+
+

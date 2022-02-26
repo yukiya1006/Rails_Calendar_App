@@ -17,6 +17,7 @@
       <th>重量</th>
       <th>回数</th>
       <th>セット数</th>
+      <th>日付</th>
       <th></th>
     </tr>
   </thead>
@@ -28,8 +29,8 @@
         <td><%= blog.weight %></td>
         <td><%= blog.rep %></td>
         <td><%= blog.set %></td>
-        <td><%= blog.start_time %></td>
-        <td><%= link_to '消去',blog_path(blog.id), class: "btn btn-danger btn-sm", method: :delete, data: { confirm: '削除しますか？' }%></td>
+        <td><%= blog.start_time.strftime("%Y-%m-%d %H:%M:%S") %></td>
+        <td class="delete"><%= link_to '消去',blog_path(blog.id), class: "btn btn-danger btn-sm", method: :delete, data: { confirm: '削除しますか？' }%></td>
       </tr>
     <% end %>
   </tbody>

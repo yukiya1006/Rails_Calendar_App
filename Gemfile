@@ -60,3 +60,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'simple_calendar', '~> 2.0'
 gem 'devise'
 gem 'rails_12factor'
+
+gem "chartkick"
+gem 'groupdate'
+
+gem 'devise-i18n'

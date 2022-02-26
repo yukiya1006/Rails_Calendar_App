@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_25_131637) do
+ActiveRecord::Schema.define(version: 2022_02_26_101008) do
 
   create_table "blogs", force: :cascade do |t|
     t.string "menu"
@@ -18,6 +18,13 @@ ActiveRecord::Schema.define(version: 2022_02_25_131637) do
     t.integer "weight"
     t.integer "rep"
     t.datetime "start_time"
+    t.integer "body_weight"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "diaries", force: :cascade do |t|
+    t.integer "body_weight"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

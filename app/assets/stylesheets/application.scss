@@ -36,20 +36,20 @@
  }
 }
 
+
+html {
+ height: 100%;
+}
+
 body {
- background: linear-gradient(to bottom, #FFF, #FFC778 30%, #F89174 60%, #748af8);
-background: rgb(240,180,255);
-background: radial-gradient(circle, rgba(240,180,255,1) 0%, rgba(180,236,249,1) 100%);
+ background: rgb(240,180,255);
+ background: radial-gradient(circle, rgba(240,180,255,1) 0%, rgba(180,236,249,1) 100%);
+ height: 100%;
 }
 
 .top {
  color: #6633FF;
- // background:linear-gradient(transparent 75%, #9966FF 0%);
- // background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1));
- // background: linear-gradient(to bottom, #FFF, #FFC778 30%, #F89174 60%, #748af8);
  text-align: center;
-// background: rgb(113,186,187);
-// background: linear-gradient(0deg, rgba(113,186,187,1) 0%, rgba(119,112,172,1) 100%);
 }
 
 .menu-list {
@@ -73,19 +73,220 @@ background: radial-gradient(circle, rgba(240,180,255,1) 0%, rgba(180,236,249,1) 
  margin-right: 20px;
 }
 
-.schedule {
-   font-family: system-ui;
-   // background:linear-gradient(transparent 75%, #FF00FF 0%);
-   // background:linear-gradient(#C0C0C0);
+//topページ
+
+
+.top-box {
+  background: pink;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-buton {
+  display: flex;
+  justify-content:space-around
 }
 
-// @media (max-width: 720px) and (min-width: 421px) {
-//  .menu-list {
-//  display: flex;
-// 	flex-wrap: wrap;
-// 	gap: 10px 27px;
-// }
-// }
+.top-name {
+  background:linear-gradient(transparent 70%, #FFFFCC 0%)
+}
+
+.name-1 {
+  margin-top: 30px;
+}
+
+.name-2 {
+  margin-bottom: 30px;
+}
+
+.top-signin input[type="submit"] {
+  border-style: none;
+  width: 30%;
+  height: 31px;
+  background: rgb(80,178,255);
+  background: linear-gradient(0deg, rgba(80,178,255,1) 0%, rgba(135,246,255,1) 88%);
+  border-radius: 3px;
+  border: 1px #a88734 solid;
+}
+
+.top-signin input[type="submit"]:hover {
+  cursor: pointer;
+  background: rgb(80,178,255);
+  background: linear-gradient(0deg, rgba(80,178,255,1) 0%, rgba(92,243,255,1) 88%);
+}
+
+.top-login input[type="submit"] {
+  border-style: none;
+  width: 30%;
+  height: 31px;
+  background: rgb(31,255,0);
+  background: linear-gradient(0deg, rgba(31,255,0,1) 0%, rgba(190,255,188,1) 88%);
+  border-radius: 3px;
+  border: 1px #a88734 solid;
+}
+
+.top-login input[type="submit"]:hover {
+  cursor: pointer;
+  background: rgb(31,255,0);
+  background: linear-gradient(0deg, rgba(31,255,0,1) 0%, rgba(138,255,134,1) 88%);
+}
+//ログイン、サインインページ
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+}
+
+.box1 {
+  width: 350px;
+  height: 600px;
+  margin: 60px auto 0;
+  border-radius: 4px;
+}
+
+.box2 {
+  width: 350px;
+  height: 450px;
+  margin: 60px auto 0;
+  border-radius: 4px;
+}
+
+.box-inner {
+  padding: 20px 26px;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  padding-bottom: 4px;
+  color: #111111;
+}
+
+.box-name {
+  margin-bottom: 13px;
+}
+
+.box-email {
+  margin-bottom: 13px;
+}
+
+.box-password {
+  margin-bottom: 22px;
+}
+
+.box-name label, .box-email label, .box-password label {
+  font-weight: 700;
+  font-size: 13px;
+  padding-left: 2px;
+  padding-bottom: 2px;
+}
+
+.box-name input[type="text"], .box-email input[type="email"], .box-password input[type="password"] {
+  border-style: none;
+  box-sizing: border-box;
+  width: 100%;
+  height: 31px;
+  border: 1px solid #a6a6a6;
+  box-shadow: 0 1px 0 rgba(0,0,0,.07) inset;
+  border-radius: 3px;
+  padding: 0 7px;
+}
+
+.column-left {
+  float: left;
+}
+
+.column-right {
+  float: right;
+}
+
+.box-password a {
+  font-size: 13px;
+}
+
+.box-login {
+  margin-bottom: 26px;
+}
+
+.box-login input[type="submit"] {
+  border-style: none;
+  width: 100%;
+  height: 31px;
+  // background: linear-gradient(to bottom,#f7dfa5,#f0c14b); 元々の仕様
+ background: rgb(31,255,0);
+ background: linear-gradient(0deg, rgba(31,255,0,1) 0%, rgba(190,255,188,1) 88%);
+  border-radius: 3px;
+  border: 1px #a88734 solid;
+}
+
+
+.box-login input[type="submit"]:hover {
+  cursor: pointer;
+  background: rgb(31,255,0);
+  background: linear-gradient(0deg, rgba(31,255,0,1) 0%, rgba(138,255,134,1) 88%);
+}
+
+
+.box-signin input[type="submit"] {
+  border-style: none;
+  width: 100%;
+  height: 31px;
+  background: rgb(80,178,255);
+  background: linear-gradient(0deg, rgba(80,178,255,1) 0%, rgba(135,246,255,1) 88%);
+  border-radius: 3px;
+  border: 1px #a88734 solid;
+}
+
+
+.box-signin input[type="submit"]:hover {
+  cursor: pointer;
+  background: rgb(80,178,255);
+  background: linear-gradient(0deg, rgba(80,178,255,1) 0%, rgba(92,243,255,1) 88%);
+}
+
+
+.remember {
+  font-size: 13px;
+  margin-top: 18px;
+  padding-left: 3px;
+}
+
+.box-newusr p {
+  text-align: center;
+  font-size: 12px;
+  color: #767676;
+  margin-bottom: 14px;
+}
+
+.box-newusr p span {
+  text-decoration: line-through;
+  text-decoration-color: #e7e7e7;
+}
+
+.box-newusr a {
+  display: block;
+  width: 100%;
+  height: 31px;
+  font-size: 13px;
+  color: #111;
+  line-height: 31px;
+  text-align: center;
+  background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);
+  border-radius: 3px;
+  border: 1px #a2a6ac solid;
+}
+
+.box-newusr a:hover {
+  background: #e7e9ec;
+}
+
+
+
 
 @media (max-width: 720px) and (min-width: 0px){
  .menu-list {

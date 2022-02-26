@@ -2,7 +2,6 @@ class BlogsController < ApplicationController
   def index
     @blogs = Blog.all
     @blog = Blog.new
-    # @blog = Blog.find(params[:id])
   end
 
   def new
@@ -11,7 +10,7 @@ class BlogsController < ApplicationController
 
   def show
     # @blog = Blog.find(params[:id])
-    @blogs = Blog.all
+    @blogs = Blog.all.order(id: :desc) #降順、新規が上になる
     # @blog = Blog.new
   end
 
@@ -39,11 +38,18 @@ class BlogsController < ApplicationController
       render 'edit'
     end
   end
+  
+  
+
+  
+  
+  
+  
 
   private
 
   def blog_params
-    params.require(:blog).permit(:set,:menu,:start_time,:rep,:weight)
+    params.require(:blog).permit(:set,:menu,:start_time,:rep,:weight,:body_weight,:name)
   end
 
 end

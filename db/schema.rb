@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_25_174345) do
+ActiveRecord::Schema.define(version: 2022_02_25_131637) do
 
   create_table "blogs", force: :cascade do |t|
     t.string "menu"
@@ -18,17 +18,6 @@ ActiveRecord::Schema.define(version: 2022_02_25_174345) do
     t.integer "weight"
     t.integer "rep"
     t.datetime "start_time"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "trainigs", force: :cascade do |t|
-    t.string "menu"
-    t.integer "set"
-    t.integer "weight"
-    t.integer "rep"
-    t.datetime "start_time"
-    t.integer "blog_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

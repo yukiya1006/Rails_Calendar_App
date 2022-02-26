@@ -38,15 +38,18 @@
 
 body {
  background: linear-gradient(to bottom, #FFF, #FFC778 30%, #F89174 60%, #748af8);
- background: linear-gradient(to bottom, #FFC778, transparent);
+background: rgb(240,180,255);
+background: radial-gradient(circle, rgba(240,180,255,1) 0%, rgba(180,236,249,1) 100%);
 }
 
 .top {
  color: #6633FF;
  // background:linear-gradient(transparent 75%, #9966FF 0%);
  // background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1));
- background: linear-gradient(to bottom, #FFF, #FFC778 30%, #F89174 60%, #748af8);
+ // background: linear-gradient(to bottom, #FFF, #FFC778 30%, #F89174 60%, #748af8);
  text-align: center;
+// background: rgb(113,186,187);
+// background: linear-gradient(0deg, rgba(113,186,187,1) 0%, rgba(119,112,172,1) 100%);
 }
 
 .menu-list {
@@ -88,5 +91,5 @@ body {
  .menu-list {
   display: block;
  }
- 
+
 }

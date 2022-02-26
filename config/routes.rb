@@ -4,8 +4,6 @@ Rails.application.routes.draw do
   resources :blogs
   resources :homes
   resources :trainigs
-  root to: 'start#index'
+  # root to: 'start#index'
   root to: 'blogs#index'
-  
-
 end
